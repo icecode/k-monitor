@@ -19,7 +19,7 @@ async fn main()-> () {
             web_prometheus::end_point()
         });
     warp::serve(prometheus_endpoint)
-        .run(([127, 0, 0, 1], 8000))
+        .run(([0, 0, 0, 0], 8000))
         .await
 }
 
