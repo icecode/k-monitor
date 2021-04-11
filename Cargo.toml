@@ -1,0 +1,16 @@
+[package]
+name = "k-monitor"
+version = "0.1.0"
+authors = ["李冰 <libing1@5fun.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+tokio = { version = "1.4.0", features = ["full"] }
+prometheus = "0.12.0"
+lazy_static = "^1.4"
+warp = "0.3"
