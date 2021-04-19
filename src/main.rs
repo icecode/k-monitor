@@ -3,9 +3,9 @@ extern crate serde_derive;
 extern crate lazy_static;
 extern crate getopts;
 
-mod log_parse;
 mod web_prometheus;
 mod syslog_server;
+mod kong_monitor;
 
 use getopts::Options;
 use std::env;
@@ -48,7 +48,7 @@ async fn main() -> () {
             web_prometheus::end_point()
         });
     warp::serve(prometheus_endpoint)
-        .run(([0, 0, 0, 0], 8000))
+        .run(([0, 0, 0, 0], 8080))
         .await
 }
 
